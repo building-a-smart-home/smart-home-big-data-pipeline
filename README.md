@@ -60,22 +60,38 @@ The CSV files stored in Measurements folder are named and each contain one time 
 brew install podman
 brew install podman-compose
 
+pip3 install confluent_kafka
+```
+
+```
 podman-compose up
 ```
 
-Podman Desktop
+**Podman Desktop**
 
 ![](podman-desktop.png)
 
-Kafka Cluster
+**Kafka Cluster**
 
 ![](kafka-cluster.png)
 
-Spark Web UI
+**Spark Web UI**
 
 http://localhost:9090
 
 ![](apache-spark.png)
+
+## Real-Time Data Streaming
+
+![](event.png)
+
+**Producer**
+
+```
+python3 producer.py
+```
+
+![](producer.png)
 
 ## Acknowledgements
 

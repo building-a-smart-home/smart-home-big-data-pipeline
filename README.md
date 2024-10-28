@@ -61,7 +61,11 @@ brew install podman
 brew install podman-compose
 
 pip3 install confluent_kafka
+pip3 install google-cloud-bigquery
+pip3 install python-dotenv
 ```
+
+Run Kafka and Zookeeper containers
 
 ```
 podman-compose up
@@ -92,6 +96,14 @@ python3 producer.py
 ```
 
 ![](producer.png)
+
+**Consumer**
+
+```
+python3 consumer.py
+```
+
+![](consumer.png)
 
 ## Acknowledgements
 

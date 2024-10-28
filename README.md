@@ -6,9 +6,20 @@ Smart Home End to End Real-Time Data Streaming Pipeline
 
 This project aims to develop a comprehensive real-time data streaming pipeline for a Smart Home environment. The pipeline will capture, process, analyze, and visualize real-time data from the sensors and actuators in the different rooms, measuring key metrics such as temperature, humidity and brightness.
 
-The pipeline leverages a combination of Apache Kafka, Google BigQuery, Apache Spark, Docker, and Google Cloud Services to ensure efficient data ingestion, processing, storage, and visualization.
+The pipeline leverages a combination of Apache Kafka, Apache Zookeeper, Google BigQuery and Apache Spark to ensure efficient data ingestion, processing, storage, and visualization.
 
-## Architecture Diagram
+## Project Workflow
+
+![](analytics-workflow.png)
+
+| Component              | Description                                                                                                                                                                                                                                  |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Data Ingestion**     | Develop a robust and scalable pipeline for ingesting real-time data from various IoT devices using technologies such as Apache Kafka or MQTT.                                                                                                |
+| **Data Storage**       | Design and implement a storage solution capable of handling both structured and unstructured data.                                                                                                                                           |
+| **Data Processing**    | Build a scalable data processing pipeline using Apache Spark to handle large datasets, perform in-memory computations, and deliver real-time analytics.                                                                                      |
+| **Advanced Analytics** | 1. Anomaly Detection: Develop and integrate anomaly detection algorithms to identify deviations from normal behavior. This will involve creating models that can detect potential health issues or system malfunctions based on sensor data. |
+|                        | 2. Predictive Analytics: Develop machine learning models for predictive analytics to forecast potential equipment failures or optimize energy usage based on historical and real-time data.                                                  |
+|                        | 3. Recommendation Engine: Utilize a graph database like Neo4j to create a recommendation engine that provides personalized suggestions based on user interactions with the smart home system.                                                |
 
 ## Dataset
 
@@ -29,31 +40,42 @@ The CSV files stored in Measurements folder are named and each contain one time 
 | SetpointHistory       | This is the setpoint for the room in degrees Celsius as a floating-point number, defined by the controller's schedule.                                                                                                  |
 | OutdoorTemperature    | This is the outside air temperature, obtained from a virtual weather service in degrees Celsius, and stored as a floating-point number.                                                                                 |
 
-## Project Workflow
-
-![](analytics-workflow.png)
-
-| Component              | Description                                                                                                                                                                                                                                      |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Data Ingestion**     | Develop a robust and scalable pipeline for ingesting real-time data from various IoT devices using technologies such as Apache Kafka or MQTT.                                                                                                    |
-| **Data Storage**       | Design and implement a storage solution capable of handling both structured and unstructured data.                                                                                                                                               |
-| **Data Processing**    | Build a scalable data processing pipeline using Apache Spark to handle large datasets, perform in-memory computations, and deliver real-time analytics.                                                                                          |
-| **Advanced Analytics** | **1. Anomaly Detection**: Develop and integrate anomaly detection algorithms to identify deviations from normal behavior. This will involve creating models that can detect potential health issues or system malfunctions based on sensor data. |
-|                        | **2. Predictive Analytics**: Develop machine learning models for predictive analytics to forecast potential equipment failures or optimize energy usage based on historical and real-time data.                                                  |
-|                        | **3. Recommendation Engine**: Utilize a graph database like Neo4j to create a recommendation engine that provides personalized suggestions based on user interactions with the smart home system.                                                |
-
 ## Technologies Used
+
+- Podman: an open-source containerization platform that allows developers to build, manage, and run containerized applications without requiring a central daemon like Docker. It supports running containers as rootless (non-privileged) users, enhancing security and flexibility.
 
 - Apache Kafka: message queuing and managing real-time data streams, supporting high throughput and scalability for data ingestion.
 
 - Google BigQuery: As the primary data warehouse for storing processed data in structured format, allowing fast querying and analytics at scale.
-  Data Processing and Transformation
 
 - Apache Spark: For data transformation, cleaning, and aggregation in real-time, ensuring the data is in a format ready for analytics and machine learning.
 
 - Power BI: For building interactive dashboards and visualizations, allowing users to monitor real-time data, trends, and insights from the smart home environment.
 
 - Python: The primary language for scripting, data processing, and machine learning model development.
+
+## Project Setup
+
+```
+brew install podman
+brew install podman-compose
+
+podman-compose up
+```
+
+Podman Desktop
+
+![](podman-desktop.png)
+
+Kafka Cluster
+
+![](kafka-cluster.png)
+
+Spark Web UI
+
+http://localhost:9090
+
+![](apache-spark.png)
 
 ## Acknowledgements
 

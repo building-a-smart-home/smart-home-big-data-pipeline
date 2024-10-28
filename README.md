@@ -4,9 +4,9 @@ Smart Home End to End Real-Time Data Streaming Pipeline
 
 ## Project Overview
 
-This project aims to develop a comprehensive real-time data streaming pipeline for a Smart Home environment. The pipeline will capture, process, analyze, and visualize real-time data from the sensors and actuators in the different rooms, measuring key metrics such as temperature, humidity and brightness.
+This project aims to develop a comprehensive real-time data streaming pipeline for a Smart Home environment. The pipeline will capture, process, and analyze real-time data from the sensors and actuators in the different rooms, measuring key metrics such as temperature, humidity and brightness.
 
-The pipeline leverages a combination of Apache Kafka, Apache Zookeeper, Google BigQuery and Apache Spark to ensure efficient data ingestion, processing, storage, and visualization.
+The pipeline leverages a combination of Apache Kafka, Apache Zookeeper, Google BigQuery and Apache Spark to ensure efficient data ingestion, processing, storage and analysis.
 
 ## Project Workflow
 
@@ -50,8 +50,6 @@ The CSV files stored in Measurements folder are named and each contain one time 
 
 - Apache Spark: For data transformation, cleaning, and aggregation in real-time, ensuring the data is in a format ready for analytics and machine learning.
 
-- Power BI: For building interactive dashboards and visualizations, allowing users to monitor real-time data, trends, and insights from the smart home environment.
-
 - Python: The primary language for scripting, data processing, and machine learning model development.
 
 ## Project Setup
@@ -85,7 +83,9 @@ http://localhost:9090
 
 ![](apache-spark.png)
 
-## Real-Time Data Streaming
+## Data Ingestion
+
+**Real-Time Data Streaming**
 
 ![](event.png)
 
@@ -104,6 +104,12 @@ python3 consumer.py
 ```
 
 ![](consumer.png)
+
+## Data Storage
+
+**Big Query**
+
+![](big-query.png)
 
 ## Demo
 

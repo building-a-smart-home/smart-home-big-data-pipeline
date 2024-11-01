@@ -63,6 +63,18 @@ pip3 install google-cloud-bigquery
 pip3 install python-dotenv
 ```
 
+Python Virtual Environment
+
+```
+# Create environment
+python3 -m venv .venv
+# Activate the env
+source .venv/bin/activate
+
+# Install Python libraries
+pip3 install -r requirements.txt
+```
+
 Run Kafka and Zookeeper containers
 
 ```

@@ -75,7 +75,7 @@ source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-Run Kafka and Zookeeper containers
+Start the Kafka cluster
 
 ```
 podman-compose up
@@ -88,6 +88,13 @@ podman-compose up
 **Kafka Cluster**
 
 ![](kafka-cluster.png)
+
+| Tool                          | Purpose                                                                                                                    |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Zookeeper**                 | Manages and coordinates the Kafka brokers. Responsible for leader election, configuration management, and tracking topics. |
+| **Kafka Server (Broker)**     | Receives, stores, and serves the records to consumers. Acts as the main node for message distribution in the cluster.      |
+| **Confluent Schema Registry** | Stores schemas for structured data in Kafka topics, allowing for data consistency and compatibility over time.             |
+| **Confluent Control Center**  | Provides a UI to monitor and interact with the Kafka cluster, including brokers, topics, consumers, and configurations.    |
 
 **Spark Web UI**
 
@@ -125,7 +132,7 @@ python3 consumer.py
 
 ## Demo
 
-https://drive.google.com/file/d/1QQCwleQX-d8n7ieQ6p-2ABXxmAr9tfPf/view?usp=sharing
+https://drive.google.com/file/d/1K24pXCo2Ww_eTKuVJbVOyqnWru2uDDi0/view?usp=sharing
 
 ## Acknowledgements
 

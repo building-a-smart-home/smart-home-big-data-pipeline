@@ -96,6 +96,12 @@ podman-compose up
 | **Confluent Schema Registry** | Stores schemas for structured data in Kafka topics, allowing for data consistency and compatibility over time.             |
 | **Confluent Control Center**  | Provides a UI to monitor and interact with the Kafka cluster, including brokers, topics, consumers, and configurations.    |
 
+**Confluent Control Center**
+
+http://localhost:9021
+
+![](confluent-control-center.png)
+
 **Spark Web UI**
 
 http://localhost:9090
